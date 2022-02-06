@@ -3,10 +3,6 @@ var cors = require('cors');
 
 const app = express();
 app.use(cors());
-app.use(function (req, res, next) {
-    res.setHeader('Content-Security-Policy', "default-src 'self' localhost");
-    next();
-});
 
 const http = require('http');
 const server = http.createServer(app);
